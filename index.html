@@ -1,20 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<script>
-window.sentryOnLoad = function () {
-Sentry.init({ release: "b3-versioning@1.2.0", environment: "dev" });
-};
-</script>
-<script
-src="https://js-de.sentry-cdn.com/VOTRE_CLE.min.js"
-crossorigin="anonymous"
-></script>
+<!doctype html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script>
+        window.sentryOnLoad = function () {
+            Sentry.init({ release: "b3-versioning@1.2.0", environment: "dev" });
+        };
+    </script>
+    <script src="https://js-de.sentry-cdn.com/VOTRE_CLE.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <button type="button" id="erreur-test">Déclencher une erreur de test</button>
+    <script>
+        document.getElementById("erreur-test").addEventListener("click", function () {
+            throw new Error("Erreur de test Sentry");
+        });
+    </script>
 </body>
 </html>

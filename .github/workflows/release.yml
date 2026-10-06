@@ -18,7 +18,7 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run lint:html
-      - run: zip "site-${{ github.ref_name }}.zip" index.html
+      - run: zip "site-${{ github.ref_name }}.zip" index.html sentry.js
       - run: gh release create "${{ github.ref_name }}" "site-${{ github.ref_name }}.zip" --generate-notes
         env:
           GH_TOKEN: ${{ github.token }}

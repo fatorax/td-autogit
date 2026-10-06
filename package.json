@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "html-validate": "^10.9.0"
+  },
+  "scripts": {
+    "test": "node --test",
+    "lint:html": "html-validate index.html"
+  }
+}

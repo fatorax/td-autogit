@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "test": "node --test"
+    "test": "node --test",
+    "lint:html": "html-validate index.html"
+  },
+  "devDependencies": {
+    "html-validate": "^10.9.0"
   }
 }

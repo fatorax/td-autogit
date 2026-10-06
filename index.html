@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+<script>
+window.sentryOnLoad = function () {
+Sentry.init({ release: "b3-versioning@1.2.0", environment: "dev" });
+};
+</script>
+<script
+src="https://js-de.sentry-cdn.com/VOTRE_CLE.min.js"
+crossorigin="anonymous"
+></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
